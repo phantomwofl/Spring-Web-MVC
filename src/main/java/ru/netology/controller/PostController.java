@@ -5,7 +5,6 @@ import ru.netology.model.Post;
 import ru.netology.service.PostService;
 
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
 @RequestMapping("/api/posts")
@@ -17,7 +16,7 @@ public class PostController {
   }
 
   @GetMapping
-  public ConcurrentHashMap<Long, Post> all() {
+  public List<Post> all() {
     return service.all();
   }
 

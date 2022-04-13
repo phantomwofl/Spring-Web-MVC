@@ -7,7 +7,7 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 public interface PostRepository {
-  ConcurrentHashMap <Long, Post> all();
+  List<Post> all();
 
   Optional<Post> getById(long id);
 
