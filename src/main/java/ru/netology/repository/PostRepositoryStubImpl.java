@@ -32,6 +32,7 @@ public class PostRepositoryStubImpl implements PostRepository {
     if (post.getId() == 0) {
       Long id = counter.incrementAndGet();
       post.setId(id-1);
+      collection.put(post.getId(), post);
     } else {
       collection.put(post.getId(), post);
     }
